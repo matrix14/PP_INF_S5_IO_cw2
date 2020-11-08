@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PP_INF_S5_IO_cw2
+namespace ServerEchoLibrary
 {
-    class Program
+    class ServerMain
     {
         static void Main(string[] args)
         {
+            ServerEchoAPM sAPM = new ServerEchoAPM(System.Net.IPAddress.Parse("127.0.0.1"), 1234);
+            sAPM.Start();
         }
     }
 }
